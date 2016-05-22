@@ -3,7 +3,12 @@ project(EffectiveCPP)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 
-FIND_PACKAGE(Boost)
+if (WIN32)
+    set(Boost_INCLUDE_DIR c:/dev/boost_1_61_0)
+    include_directories(${Boost_INCLUDE_DIR})
+else ()
+    find_package(boost)
+endif ()
 
 add_subdirectory(Item1)
 add_subdirectory(Item2)
