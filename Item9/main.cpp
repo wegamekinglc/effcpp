@@ -21,8 +21,8 @@ int main() {
     fp1(1, "hell");
     fp2(1, "hell");
 
-    MyAllocListUsing list1;
-    MyAllocList::type list2;
+    MyAllocListUsing<double> list1;
+    MyAllocList<double>::type list2;
 
     return 0;
 }
